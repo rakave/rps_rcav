@@ -66,6 +66,26 @@
         </div>
       </div>
     </div>
+
+<!-- Announcement : Win, Lose, Tie -->
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="well text-center">
+
+          <h1>
+            <% if @result == "You tied!" %>
+            <span class="label label-warning"> <%= @result %> </span>
+            <% elsif @result == "You won!" %>
+            <span class="label label-success"> <%= @result %> </span>
+            <% elsif @result == "You lost!" %>
+            <span class="label label-danger"> <%= @result %> </span>
+            <% end %>
+          </h1>
+
+        </div>
+      </div>
+    </div>
+
 </div>
 
   <%= yield %>
